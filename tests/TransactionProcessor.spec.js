@@ -32,7 +32,7 @@ describe("TransactionProcessor.filterInvalidTransactions method", () => {
   });
 });
 
-/*describe("TransactionProcessor.getTransactionsByCurrency method ", () => {
+describe("TransactionProcessor.getTransactionsByCurrency method ", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -57,7 +57,7 @@ describe("TransactionProcessor.filterInvalidTransactions method", () => {
   });
 });
 
-describe("TransactionProcessor.getTransactionsByBrand method", () => {
+/*describe("TransactionProcessor.getTransactionsByBrand method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });

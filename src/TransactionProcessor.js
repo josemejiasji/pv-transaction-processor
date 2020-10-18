@@ -22,14 +22,15 @@ class TransactionProcessor {
   // Remove invalid transactions
   // TODO: review why this functionality is reversed, to pass the test it returns only INVALID txs, is the test ok?
   filterInvalidTransactions() {
-    this.transactions =  this.transactions.filter((tx) => !TransactionProcessor.isValidTransaction(tx));
+    this.transactions = this.transactions.filter((tx) => !TransactionProcessor.isValidTransaction(tx));
 
     return this
   }
 
   // Return transactions of given currency
   getTransactionsByCurrency(currency) {
-    // ...
+    this.transactions = this.transactions.filter((tx) => tx.currency === currency);
+
     return this;
   }
 
