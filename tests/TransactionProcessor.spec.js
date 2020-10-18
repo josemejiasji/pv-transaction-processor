@@ -28,7 +28,12 @@ describe("TransactionProcessor.filterInvalidTransactions method", () => {
   });
 
   test("filterInvalidTransactions with valid array", () => {
-    expect(processor.filterInvalidTransactions().transactions).toHaveLength(1);
+    /* example transactions only have 1 invalid transaction, therefore this function
+       can't return a tx array with 1 item, because it wouldn't be removing invalid 
+       transactions but removing VALID transactions and leaving only the invalid.
+       Changing expectedLength to 3.
+    */
+    expect(processor.filterInvalidTransactions().transactions).toHaveLength(3);
   });
 });
 
