@@ -44,7 +44,9 @@ class TransactionProcessor {
   // BONUS:
   // Apply multiple filters. Filters parameter should be an array of functions (predicates)
   filterTransaction(filters) {
-    // ...
+    this.transactions = filters.reduce((txAcc, filterFn) => {
+      return txAcc.filter(filterFn);
+    }, this.transactions)
     return this;
   }
 

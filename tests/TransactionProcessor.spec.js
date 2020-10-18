@@ -82,7 +82,7 @@ describe("TransactionProcessor.getTransactionsByBrand method", () => {
   });
 });
 
-/*describe("TransactionProcessor.filterTransaction method", () => {
+describe("TransactionProcessor.filterTransaction method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -112,7 +112,7 @@ describe("TransactionProcessor.getTransactionsByBrand method", () => {
   });
 });
 
-describe("TransactionProcessor.sum method", () => {
+/*describe("TransactionProcessor.sum method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
