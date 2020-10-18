@@ -127,7 +127,7 @@ describe("TransactionProcessor.sum method", () => {
   });
 });
 
-/*describe("Fluent method", () => {
+describe("Fluent method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -140,4 +140,4 @@ describe("TransactionProcessor.sum method", () => {
   test("filter visa and sum", () => {
     expect(processor.getTransactionsByBrand("visa").sum()).toBe(1.01);
   });
-});*/
+});
