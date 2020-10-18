@@ -19,6 +19,11 @@ class TransactionProcessor {
       && ["EUR", "GBP", "USD"].includes(transaction.currency);
   }
 
+  // Round number to 2 decimal places
+  static round(number) {
+    return Math.round((number + Number.EPSILON) * 100) / 100
+  }
+
   // Remove invalid transactions
   // TODO: review why this functionality is reversed, to pass the test it returns only INVALID txs, is the test ok?
   filterInvalidTransactions() {
@@ -52,7 +57,10 @@ class TransactionProcessor {
 
   // Return the total amount of current transactions array
   sum() {
-    return 0;
+    return this.transactions
+    .filter(TransactionProcessor.isValidTransaction)
+    .reduce((acc, tx) => TransactionProcessor.round(acc + tx.amount), 0);
+
   }
 }
 

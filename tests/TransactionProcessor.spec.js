@@ -112,7 +112,7 @@ describe("TransactionProcessor.filterTransaction method", () => {
   });
 });
 
-/*describe("TransactionProcessor.sum method", () => {
+describe("TransactionProcessor.sum method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -127,7 +127,7 @@ describe("TransactionProcessor.filterTransaction method", () => {
   });
 });
 
-describe("Fluent method", () => {
+/*describe("Fluent method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
