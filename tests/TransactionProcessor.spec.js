@@ -57,7 +57,7 @@ describe("TransactionProcessor.getTransactionsByCurrency method ", () => {
   });
 });
 
-/*describe("TransactionProcessor.getTransactionsByBrand method", () => {
+describe("TransactionProcessor.getTransactionsByBrand method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -70,7 +70,9 @@ describe("TransactionProcessor.getTransactionsByCurrency method ", () => {
   });
 
   test("getTransactionsByBrand with valid brand", () => {
-    expect(processor.getTransactionsByBrand("visa")).toHaveLength(1);
+    expect(
+      processor.getTransactionsByBrand("visa").transactions
+    ).toHaveLength(1);
   });
 
   test("getTransactionsByBrand with false brand", () => {
@@ -80,7 +82,7 @@ describe("TransactionProcessor.getTransactionsByCurrency method ", () => {
   });
 });
 
-describe("TransactionProcessor.filterTransaction method", () => {
+/*describe("TransactionProcessor.filterTransaction method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });
@@ -125,7 +127,7 @@ describe("TransactionProcessor.sum method", () => {
   });
 });
 
-describe("Fluent method", () => { 
+describe("Fluent method", () => {
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });

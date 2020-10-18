@@ -36,7 +36,8 @@ class TransactionProcessor {
 
   // Return transactions of given brand
   getTransactionsByBrand(brand) {
-    // ...
+    this.transactions = this.transactions.filter((tx) => tx.brand === brand);
+
     return this;
   }
 
