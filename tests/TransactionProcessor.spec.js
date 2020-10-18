@@ -125,7 +125,7 @@ describe("TransactionProcessor.sum method", () => {
   });
 });
 
-describe("Fluent method", () => {
+describe("Fluent method", () => { 
   beforeAll(() => {
     processor = new TransactionProcessor(transactions);
   });

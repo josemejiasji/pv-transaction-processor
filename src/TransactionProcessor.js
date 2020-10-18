@@ -13,8 +13,10 @@ class TransactionProcessor {
 
   // Check valid transactions rules
   static isValidTransaction(transaction) {
-    // ...
-    return true;
+    return transaction.id > 0
+      && transaction.amount >= 0
+      && ["visa", "mastercard", "amex"].includes(transaction.brand)
+      && ["EUR", "GBP", "USD"].includes(transaction.currency);
   }
 
   // Remove invalid transactions
